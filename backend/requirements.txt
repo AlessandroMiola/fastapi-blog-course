@@ -4,6 +4,10 @@ uvicorn==0.22.0
 SQLAlchemy==2.0.13
 psycopg2==2.9.6         # SQLAlchemy needs an adapter to communicate with PostgreSQL <-> psycopg2
 
-python-dotenv==1.0.0    # keep project environment variables in a .env file and read from htat
+python-dotenv==1.0.0    # keep project environment variables in a .env file and read from that
 
 alembic==1.11.1         # for db migration
+
+pydantic[email]
+
+passlib[bcrypt]
