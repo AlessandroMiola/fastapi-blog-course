@@ -14,7 +14,7 @@ def start_application():
         title=settings.PROJECT_TITLE,
         version=settings.PROJECT_VERSION
     )
-    create_tables()
+    # create_tables()   propagate the changes to tables only through alembic, not when starting the server
     return app
 
 
