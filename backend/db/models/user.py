@@ -1,6 +1,7 @@
 from db.base_class import Base
-from sqlalchemy import Index, Index, Boolean, Column, Integer, String
+from sqlalchemy import Boolean, Column, Integer, String
 from sqlalchemy.orm import relationship
+from .blog import Blog
 
 
 class User(Base):

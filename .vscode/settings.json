@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "database",
+            "port": 5442,
+            "driver": "PostgreSQL",
+            "name": "database",
+            "database": "blogdbcourse",
+            "username": "root"
+        }
+    ]
+}
