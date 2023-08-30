@@ -1,8 +1,10 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from core.config import settings
 from db.session import engine
 from db.base_class import Base
 from apis.base import api_router
+from apps.base import app_router
 
 
 # create tables in the db;
@@ -12,6 +14,11 @@ from apis.base import api_router
 
 def include_router(app):
     app.include_router(api_router)
+    app.include_router(app_router)
+
+
+def configure_staticfiles(app):
+    app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 def start_application():
@@ -21,6 +28,7 @@ def start_application():
     )
     # create_tables()   propagate the changes to tables only through alembic, not when starting the server
     include_router(app)
+    configure_staticfiles(app)
     return app
 
 
