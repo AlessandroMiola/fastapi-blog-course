@@ -5,4 +5,4 @@ env
 test_db.db
 db-data/
 pgadmin-data/
-.vscode/
+.vscode/*
