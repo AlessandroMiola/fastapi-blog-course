@@ -34,6 +34,7 @@ def update_blog_by_id(id: int, blog: UpdateBlog, db: Session, author_id: int = 1
     if not blog_in_db.author_id == author_id:
         return {"error": "Only the author can modify the blog"}
     blog_in_db.title = blog.title
+    blog_in_db.slug = blog.slug
     blog_in_db.content = blog.content
     db.add(blog_in_db)
     db.commit()
